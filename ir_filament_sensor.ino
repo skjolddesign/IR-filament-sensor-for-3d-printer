@@ -7,8 +7,12 @@
  *   - DIGISPARK PINS: 
  *   https://hackster.imgix.net/uploads/attachments/779313/digispark-pinout_QeJ1n4FNv3.png?auto=compress%2Cformat&w=1280&h=960&fit=max 
  *   
- *   - IR OBSTACLE SENSOR:
+ *   - IR OBSTACLE SENSOR TUTORIAL:
  *   https://create.arduino.cc/projecthub/muhammed-shameel-k-v/simple-obstacle-sensor-with-arduino-988ae3
+ *
+ *   - SENSOR
+ *   https://www.ebay.com/itm/10PCS-TCRT5000L-TCRT5000-Reflective-Optical-Sensor-Infrared-IR-Switch-infrared/200942957928?hash=item2ec9223568:g:GiwAAOSw2~Jbkhyj
+ 
     
     - WIRING:
     IR LED Anode => R1 470 ohms resistor => 5v (update: R470 is to strong, use a litle higher value)
