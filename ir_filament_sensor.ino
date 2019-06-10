@@ -21,12 +21,11 @@
     
     - WIRING:
     IR LED Anode => R1 470 ohms resistor => 5v (update: R470 is to strong, use a litle higher value)
-    IR Cathode   => GND (den store basen inni LED)
+    IR Cathode   => GND (the big base inside LED)
     PhotoDiode Anode   => GND
     PhotoDiode Cathode => Analog
-    Analog => R2 3.3k ohms resistor => 5V (R2 er da Pullup resistor)
-    Dette gir AD 38 i 1cm luft.
-    Detektor leder til GND ved IR lys. Høyere R2 gir mer følsomhet.
+    Analog => R2 3.3k ohms resistor => 5V (R2 is Pullup resistor)
+    Detector conducts to GND when sees IR light. Higher R2 gives higher sensitiviy.
     
 */
 
@@ -52,7 +51,7 @@ int sensorValue = 0;
 unsigned int detections = 0; // used to delay filament EMPTY.
 
 void setup() {
-  mySoftSerial.begin(9600); // After MyDbgSerial.begin(), the serial port is in rxMode by default
+  mySoftSerial.begin(9600); // After mySoftSerial.begin(), the serial port is in rxMode by default
   mySoftSerial.txMode(); //Before sending a message, switch to txMode
   pinMode(outputPin, outputPin);
   digitalWrite(outputPin,LOW);
