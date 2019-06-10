@@ -11,3 +11,5 @@ sensor: https://www.ebay.com/itm/10PCS-TCRT5000L-TCRT5000-Reflective-Optical-Sen
 
 Features:
 - 2 second filament EMPTY delay. 
+- Works with transparent filament.
+- Serial debug output on Pin 4.
