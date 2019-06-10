@@ -21,9 +21,9 @@
     
     - WIRING:
     IR LED Anode => R1 470 ohms resistor => 5v (update: R470 is to strong, use a litle higher value)
-    IR Cathode   => GND (the big base inside LED)
-    PhotoDiode Anode   => GND
-    PhotoDiode Cathode => Analog
+    IR LED Cathode   => GND (the big base inside LED)
+    Detector Anode   => GND
+    Detector Cathode => Analog
     Analog => R2 3.3k ohms resistor => 5V (R2 is Pullup resistor)
     Detector conducts to GND when sees IR light. Higher R2 gives higher sensitiviy.
     
