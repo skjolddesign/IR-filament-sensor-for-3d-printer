@@ -1,6 +1,13 @@
 /*   - PROJECT:
  *   Arduino (Digispark) 3D printer filament sensor. Switch output 1, dependent on ir beam interruption on A1:
+ *   
+ *   - IMAGE:
+ *   https://github.com/skjolddesign/IR-filament-sensor-for-3d-printer/blob/master/IMG_0820b.JPG
+ *   
+ *   - CODE:
  *   https://github.com/skjolddesign/IR-filament-sensor-for-3d-printer
+ *   
+ *   - 3D Design
  *   https://www.tinkercad.com/things/2x7NXTsgyG6-ir-filament-sensor
  
  *   
