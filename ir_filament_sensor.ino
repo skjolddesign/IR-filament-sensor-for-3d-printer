@@ -20,19 +20,23 @@
  *   https://www.ebay.com/itm/10PCS-TCRT5000L-TCRT5000-Reflective-Optical-Sensor-Infrared-IR-Switch-infrared/200942957928?hash=item2ec9223568:g:GiwAAOSw2~Jbkhyj
     
     - WIRING:
-    IR LED Anode => R1 470 ohms resistor => 5v (update: R470 is to strong, use a litle higher value)
-    IR LED Cathode   => GND (the big base inside LED)
-    Detector Anode   => GND
-    Detector Cathode => Analog
-    Analog => R2 3.3k ohms resistor => 5V (R2 is Pullup resistor)
-    Detector conducts to GND when sees IR light. Higher R2 gives higher sensitiviy.
+    IR LED Anode(+)        => R1 => 5v (R1 is 470ohm series resistor. update: 470ohm is to strong, use a litle higher value)
+    IR LED Cathode(-)      => GND (GND is the short leg with big base inside LED)
+    IR Detector Cathode(-) => GND (GND is the short leg)
+    IR Detector Anode(+)   => analogInPin (defined below as Digispark A1/P2)
+    analogInPin => R2 => 5V (R2 is 3.3k ohms pullup resistor)
+    
+    Wiring description:
+    IR led has a series resistor R1 to reduce LED current.
+    IR Detector has a pullup resistor R2 connected to its Cathode/analogInPin.
+    IR Detector conducts analogInPin to GND when it sees IR light. Higher R2 gives higher sensitiviy.
     
 */
 
 // Defines (you can change these):
-#define DEBUG_TX_RX_PIN   4  // serial debug pin 4 Digispark (yes we use same pin for TX and RX)
-#define analogInPin      A1  // Digispark A1/P2 is floating and good for use. (some pins may have resistors on them)
-#define outputPin         1  // Digispark Pin 1 has built in led
+#define DEBUG_TX_RX_PIN   4  // serial debug pin 4 Digispark (yes we use same pin for TX and RX), Use a USB-TTL serial adapter to read data.
+#define analogInPin      A1  // IR detector pin (Digispark A1/P2 is floating and good for use. (some pins may have resistors on them))
+#define outputPin         1  // Signal to 3d-printer/Octoprint (Digispark Pin 1 is also the built in led)
 
 // Trigger value is used to decide OK/EMPTY filament. Use serial debug pin to see sensor value.
 // IMPORTAINT! If powered by 3.3V vs 5V, the IR LED power is lower, detector resistanse will rise, and sensorValue will rise.
