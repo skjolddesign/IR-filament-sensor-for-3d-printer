@@ -22,8 +22,8 @@
     - WIRING:
     IR LED Anode(+)        => R1 => 5v (R1 is 470ohm series resistor. update: 470ohm is to strong, use a litle higher value)
     IR LED Cathode(-)      => GND (GND is the short leg with big base inside LED)
-    IR Detector Anode(-)   => GND (GND is the short leg)
-    IR Detector Cathode(+) => analogInPin (defined below as Digispark A1/P2)
+    IR Detector Cathode(-) => GND (GND is the short leg)
+    IR Detector Anode(+)   => analogInPin (defined below as Digispark A1/P2)
     analogInPin => R2 => 5V (R2 is 3.3k ohms pullup resistor)
     
     Wiring description:
